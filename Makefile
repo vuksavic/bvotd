@@ -20,7 +20,7 @@ install: $(SCRIPT_FILE) $(PASSAGES_FILE)
 $(SCRIPT_FILE):
 	@echo "installing script to $(SCRIPT_FILE)..."
 	@mkdir -p $(INSTALL_DIR)
-	@cp bin/update_motd.sh $(SCRIPT_FILE)
+	@cp bin/bvotd.sh $(SCRIPT_FILE)
 	@chmod +x $(SCRIPT_FILE)
 
 $(PASSAGES_FILE):
@@ -35,7 +35,7 @@ $(PASSAGES_FILE):
 clean:
 	@echo "cleaning up"
 	@rm -f $(SCRIPT_FILE) $(PASSAGES_FILE)
-	@sed -i '/\/usr\/local\/bin\/update_motd.sh/d' /etc/rc.local
+	@sed -i '/\/usr\/local\/bin\/bvotd.sh/d' /etc/rc.local
 
 run: $(SCRIPT_FILE)
 	@$(SCRIPT_FILE)

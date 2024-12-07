@@ -1,7 +1,7 @@
 INSTALL_DIR=/usr/local/bin
 PASSAGES_DIR=/usr/local/etc
 PASSAGES_FILE=$(PASSAGES_DIR)/bible_passages.txt
-SCRIPT_FILE=$(INSTALL_DIR)/update_motd.sh
+SCRIPT_FILE=$(INSTALL_DIR)/bvotd.sh
 REPO_RAW_URL='https://github.com/scrollmapper/bible_databases/raw/refs/heads/master/formats/txt/SrKDIjekav.txt'
 
 .PHONY: all install clean run

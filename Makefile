@@ -35,7 +35,7 @@ $(PASSAGES_FILE):
 clean:
 	@echo "cleaning up"
 	@rm -f $(SCRIPT_FILE) $(PASSAGES_FILE)
-	@sed -i '/\/usr\/local\/bin\/bvotd.sh/d' /etc/rc.local
+	@sed '/bvotd.sh/d' /etc/rc.local
 
 run: $(SCRIPT_FILE)
 	@$(SCRIPT_FILE)
